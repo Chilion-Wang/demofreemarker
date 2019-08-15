@@ -28,8 +28,8 @@ public class Test {
 		Map map = new HashMap();
 		map.put("name", "sor");
 		map.put("message", "nice to meet you!");
-		map.put("success",false);
-		
+		map.put("success",false); 
+		 
 		List goodsList = new ArrayList();
 		Map goodsMap1 = new HashMap();
 		Map goodsMap2 = new HashMap();
