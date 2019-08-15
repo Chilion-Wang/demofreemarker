@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>demo</title>
+<meta charset="utf-8">
+</head>
+<body>
+<#include "head.ftt">
+<#--我是注释，不会输出 -->
+${name},你好。我要告诉你：${message}<br>
+
+<#assign linkman="王小帅">
+我叫：${linkman}<br>
+
+<#if success=true>
+请通过
+<#else>
+不能通过
+</#if>
+
+商品有如下：<br>
+<#list goodsList as goods>
+${goods_index}:${goods.name}<br>
+</#list>
+一共${goodsList?size}条记录<br>
+<br>
+json数组转对象遍历输出:<br>
+<#assign user="[{'name':'lily','age':'18'},{'name':'小明','age':'19'}]">
+<#assign data=user?eval>
+<#list data as us>
+${us.name}<br>
+</#list>
+
+<br>
+日期:${today?date}<br>
+时间:${today?time}<br>
+时间:${today?datetime}<br>
+日期格式化:${today?string('yyyy年MM月')}<br>
+数字：${number?c}
+
+</body>
+</html>
+
